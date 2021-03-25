@@ -46,4 +46,4 @@ def design_model():
 model, callback = design_model()
 
 model.compile(loss='sparse_categorical_crossentropy', optimizer=keras.optimizers.Adam(learning_rate=0.01), metrics=['accuracy'])
-model.fit(train_iterator, epochs=50, steps_per_epoch=125, validation_data=test_iterator,validation_steps=100, verbose=1)
+model.fit(train_iterator, epochs=50, steps_per_epoch=125, validation_data=test_iterator,validation_steps=100, callbacks=[callback], verbose=1)
